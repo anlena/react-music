@@ -1,5 +1,5 @@
 import React from "react"
-import "./Ranking.styl"
+import "./ranking.styl"
 
 
 class Ranking extends React.Component {

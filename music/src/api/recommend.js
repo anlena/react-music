@@ -1,6 +1,8 @@
 import jsonp from "./jsonp"
 import {URL, PARAM, OPTION} from "./config"
 
+//jsonp调用轮播图
+// 使用Object.assign()函数把对象进行合并，相同的属性值会被覆盖。注意第一个参数使用一个空对象目的是为了不干扰PARAM对象的数据，如果把PARAM作为第一个参数，那么后面使用这个PARAM对象它里面的属性就会拥有上一次合并之后的属性，其实有些属性我们是不需要的
 export function getCarousel() {
 	const data = Object.assign({}, PARAM, {
 		g_tk: 701075963,
@@ -12,6 +14,7 @@ export function getCarousel() {
 	return jsonp(URL.carousel, data, OPTION);
 }
 
+//调用新专辑
 export function getNewAlbum() {
 	const data = Object.assign({}, PARAM, {
 		g_tk: 1278911659,
@@ -28,4 +31,16 @@ export function getNewAlbum() {
 		prefix: "callback"
 	};
 	return jsonp(URL.newalbum, data, option);
+}
+
+//请求专辑信息
+export function getAlbumInfo(albumMid){
+	const data = Object.assign({},PARAM,{
+		albummid:albumMid,
+		g_tk: 1278911659,
+		hostUin: 0,
+		platform: "yqq",
+		needNewCode: 0
+	});
+	return jsonp(URL.albumInfo, data, OPTION);
 }
