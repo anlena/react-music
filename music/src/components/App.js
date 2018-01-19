@@ -8,6 +8,7 @@ import logo from "../assets/imgs/logo.png"
 import '../assets/stylus/reset.styl'
 import './App.styl'
 import "../assets/stylus/font.styl"
+import Player from "../containers/Player"
 
 class App extends React.Component {
   render() {
@@ -48,6 +49,7 @@ class App extends React.Component {
                      <Route component={Recommend} />
                  </Switch>
             </div>
+            <Player/>
           </div>
         </Router>
     );

@@ -12,7 +12,7 @@ import "swiper/dist/css/swiper.css"
 import Scroll from "@/common/scroll/Scroll" 
 import Loading from "@/common/loading/Loading"
 import LazyLoad,{forceCheck} from "react-lazyload"
-import Album from "../album/Album"
+import Album from "@/containers/Album"
 
 class Recommend extends React.Component{
   constructor(props){
@@ -78,14 +78,14 @@ class Recommend extends React.Component{
     }
   }
 
-  toAlbumDetail(url){
-    /*scroll组件会派发一个点击事件，不能使用链接跳转*/
-    return () => {
-      this.props.history.push({
-        pathname:url
-      })
-    }
-  }
+	toAlbumDetail(url) {
+		/*scroll组件会派发一个点击事件，不能使用链接跳转*/
+		return () => {
+			this.props.history.push({
+				pathname: url
+			});
+		}
+	}
 
 	render() {
     let {match} = this.props;

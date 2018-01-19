@@ -8,8 +8,8 @@ class MusicHeader extends React.Component{
 
   render(){
     return(
-      <div className="musci-header">
-        <span className="header-back" onclick={this.handleClick}>
+      <div className="music-header">
+        <span className="header-back" onClick={this.handleClick}>
           <i className="icon-back"></i>
         </span>
         <div className="header-title">{this.props.title}</div>
