@@ -144,14 +144,14 @@ class Album extends React.Component {
 	/**
 	 * 播放全部
 	 */
-	// playAll = () => {
-	// 	if (this.state.songs.length > 0) {
-	// 		//添加播放歌曲列表
-	// 		this.props.setSongs(this.state.songs);
-	// 		this.props.changeCurrentSong(this.state.songs[0]);
-	// 		this.props.showMusicPlayer(true);
-	// 	}
-	// }
+	playAll = () => {
+		if (this.state.songs.length > 0) {
+			//添加播放歌曲列表
+			this.props.setSongs(this.state.songs);
+			this.props.changeCurrentSong(this.state.songs[0]);
+			this.props.showMusicPlayer(true);
+		}
+	}
 	/**
 	 * 监听scroll
 	 */
@@ -185,6 +185,7 @@ class Album extends React.Component {
 				</div>
 			);
 		});
+
 		return (
 			<CSSTransition in={this.state.show} timeout={300} classNames="translate">
 			<div className="music-album">
