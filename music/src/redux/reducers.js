@@ -7,7 +7,6 @@
 
 import {combineReducers} from 'redux'
 import * as ActionTypes from "./actionTypes"
-import { showPlayer } from './action';
 
 /**
  * reducer就是一个纯函数，接收旧的state和action，返回新的state

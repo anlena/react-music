@@ -7,7 +7,7 @@ const mapDispatchToPropps = (dispatch) => ({
   showMusicPlayer:(status) => {
     dispatch(showPlayer(status));
   },
-  changeCurrentSongs:(song) => {
+  changeCurrentSong:(song) => {
     dispatch(changeSong(song));
   },
   setSongs:(songs) => {
